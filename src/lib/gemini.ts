@@ -46,8 +46,9 @@ export async function sendToDM(
   if (!apiKey) throw new Error('Falta VITE_GEMINI_API_KEY en .env')
 
   const genAI = new GoogleGenerativeAI(apiKey)
+  // gemini-1.5-flash ya no existe; usar modelo actual de la API
   const model = genAI.getGenerativeModel({
-    model: 'gemini-1.5-flash',
+    model: 'gemini-3.5-flash-lite',
     systemInstruction: SYSTEM_PROMPT,
   })
 
