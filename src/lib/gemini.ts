@@ -48,7 +48,7 @@ export async function sendToDM(
   const genAI = new GoogleGenerativeAI(apiKey)
   // gemini-1.5-flash ya no existe; usar modelo actual de la API
   const model = genAI.getGenerativeModel({
-    model: 'gemini-3.5-flash-lite',
+    model: 'gemini-1.5-flash',
     systemInstruction: SYSTEM_PROMPT,
   })
 
