@@ -3,5 +3,6 @@ import react from '@vitejs/plugin-react'
 
 export default defineConfig({
   plugins: [react()],
-  base: './',
+  // Obligatorio para GitHub Pages: https://maxnannij.github.io/IA-DND/
+  base: '/IA-DND/',
 })
